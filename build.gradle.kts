@@ -1,22 +1,51 @@
 plugins {
-    kotlin("jvm") version "1.9.22"
+    kotlin("multiplatform") version "1.8.10"
 }
 
-group = "org.llesha"
-version = "1.0-SNAPSHOT"
+group = "llesha.parse"
+version = "0.5"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
-dependencies {
-    implementation("com.github.h0tk3y.betterParse:better-parse:0.4.4")
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
 kotlin {
-    jvmToolchain(17)
+    jvm {
+        jvmToolchain(17)
+        withJava()
+    }
+    js(IR) {
+        browser {
+            commonWebpackConfig {
+                cssSupport {
+                    enabled.set(false)
+                }
+            }
+            webpackTask {
+                output.libraryTarget = "commonjs2"
+                destinationDirectory = file("../site/js/interpreter")
+            }
+//            distribution {
+//                directory = file("../site")
+//            }
+        }
+        binaries.executable()
+    }
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+        val jvmMain by getting
+        val jvmTest by getting
+        val jsMain by getting
+        val jsTest by getting
+    }
 }
