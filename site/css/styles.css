@@ -1,0 +1,191 @@
+html {
+    font-family: monospace;
+}
+
+body {
+    /* transition: all 0.5s !important; */
+    margin: 0px;
+}
+
+h2,
+h4 {
+    margin: 0px;
+    padding-left: 0.25em;
+}
+
+code {
+    padding: 0.1em 0.4em;
+    margin: 0;
+    font-size: 100%;
+    white-space: break-spaces;
+    background-color: var(--light-gray);
+    border-radius: 0.5em;
+    position: relative;
+    bottom: 0.1em;
+}
+
+button {
+    padding: 0.1em 0.4em;
+    padding-bottom: -0.1em;
+    margin: 0;
+    font-size: 100%;
+    white-space: break-spaces;
+    background-color: var(--light-gray);
+    border-radius: 0.5em;
+    border: 0px;
+    font-family: inherit;
+    color: var(--main-color);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 10em;
+    border-radius: 0.3em;
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+input {
+    font-family: 'Courier';
+    color: var(--main-color);
+    background-color: var(--bg-color);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 0.2;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em;
+    /* Height of the footer */
+    background: var(--light-gray);
+}
+
+#main {
+    display: flex;
+}
+
+#left-panel {
+    width: 20%;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.clickable {
+    cursor: pointer;
+    border-radius: 0.5em;
+    user-select: none;
+}
+
+.clickable:hover {
+    background-color: var(--light-gray);
+}
+
+.text {
+    white-space: pre;
+}
+
+.panel {
+    border: 1px solid var(--main-color);
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+}
+
+.dropdown {
+    vertical-align: top;
+}
+
+.dropdown-name {
+    padding: 0.5em;
+}
+
+.dropdown-body {
+    position: absolute;
+    padding: 0.5em;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.panel-label {
+    display: inline;
+    padding-left: 0.5em;
+}
+
+.panel-add-button {
+    background-color: var(--light-gray);
+    padding-top: 0.3em;
+}
+
+.text-icon {
+    width: 0.6em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.option-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.option-choice {
+    margin-left: 1em;
+}
+
+input[type=text],
+.light-border {
+    border-radius: 0.5em;
+    border: 1px solid var(--light-gray);
+    padding: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin: 0.25em;
+}
+
+input[type=text]:focus {
+    width: 80%;
+    font-family: monospace;
+    font-size: medium;
+    outline: 0px;
+}
+
+.close {
+    float: right;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-radius: 0.3em;
+}
+
+.close:hover {
+    background-color: var(--red);
+    color: var(--bg-color);
+}
+
+.transformations button {
+    align-self: self-end;
+}
+
+input[type=checkbox] {
+    margin-left: 5px;
+    accent-color: var(--middle-color);
+}
+
+input[type='radio'] {
+    accent-color: var(--middle-color);
+}
+
+.selected {
+    border: 1px solid var(--middle-color);
+    border-radius: 0.5em;
+    margin: 0.25em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}

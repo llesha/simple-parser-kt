@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Simple parser</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/colors.css">
+
+    <link rel="icon" type="image/svg+xml" href="resources/avatar.svg">
+</head>
+
+<body style="background-color: var(--bg-color);">
+    <div id="main">
+        <div id="left-panel">
+            <div class="panel">
+                <h2 class="header">groups</h2>
+                <div class="dropdown-static">
+                    <div class="clickable light-border">unnamed<span class="close">×</span></div>
+                    <div id="new-group" class="clickable light-border">+ add new</div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2 class="header">documents</h2>
+                <div class="dropdown-static">
+                    <div class="dropdown clickable light-border">
+                        <div class="dropdown-name">unnamed</div>
+                        <div>
+                            <span class="selected">a</span>
+                        </div>
+                    </div>
+                    <div class="clickable light-border">+ add new</div>
+                </div>
+            </div>
+        </div>
+        <div id="work">
+            <div id="top-panel">
+                <div class="dropdown inline panel">
+                    <div class="dropdown-name clickable">selection<svg xmlns="http://www.w3.org/2000/svg"
+                            class="text-icon"
+                            viewBox="0 -40 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                        </svg></div>
+                    <div class="dropdown-body panel" style="display: none;">
+                        <div>
+                            <h4>type</h4>
+                            <input type="radio" id="selection-exact" name="selection-type" value="exact">
+                            <label for="selection-exact">exact</label><br>
+                            <input type="radio" id="selection-similar" name="selection-type" value="similar">
+                            <label for="selection-similar">similar</label><br>
+                            <input type="radio" id="selection-position" name="selection-type" value="position">
+                            <label for="selection-position">position</label>
+                            <br>
+                            <hr>
+                            <input type="checkbox" name="case-sensitive" id="case-sensitive">
+                            <label for="case-sensitive">case-sensitive</label>
+                            <br>
+                            <h4>match rule</h4>
+                            <input type="radio" id="match-first" name="selection-match" value="match-first">
+                            <label for="match-first">first</label><br>
+                            <input type="radio" id="match-all" name="selection-match" value="match-all">
+                            <label for="match-all">all</label><br>
+                            <input type="radio" id="match-last" name="selection-match" value="match-last">
+                            <label for="match-last">last</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown inline panel">
+                    <div class="dropdown-name clickable">left context<svg xmlns="http://www.w3.org/2000/svg"
+                            class="text-icon"
+                            viewBox="0 -40 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                        </svg></div>
+                    <div class="dropdown-body panel" style="display: none;">
+                        <div>
+                            <h3 class="option-header">type</h3>
+                            <input type="radio" id="left-context-none" name="left-context" value="none">
+                            <label for="left-context-none">none</label><br>
+                            <input type="radio" id="selection-similar" name="left-context-none" value="table">
+                            <label for="selection-similar">table</label><br>
+                            <input type="radio" id="selection-position" name="left-context-none" value="bold">
+                            <label for="selection-position">position</label>
+                            <input type="radio" id="selection-position" name="left-context-none" value="italic">
+                            <label for="selection-position">position</label>
+                            <input type="radio" id="selection-position" name="left-context-none" value="strikethrough">
+                            <label for="selection-position">position</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="transformations inline">
+                    <button>to plain text</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Made by llesha. <a class="link" href="https://github.com/llesha">GitHub</a>.</footer>
+    <script type="module" src="js/loader.js"></script>
+    <script type="module" src="js/index.js"></script>
+
+</body>
+
+</html>
